@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameZone - Gaming Tournament Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">🎮 GameZone</div>
+
+           <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="index.html#tournaments">Tournaments</a></li>
+    <li><a href="index.html#matches">Matches</a></li>
+    <li><a href="teams.html">My Team</a></li>
+    <li><a href="index.html#leaderboard">Leaderboard</a></li>
+    
+</ul>
+
+    <button class="login-btn" onclick="openLogin()">
+    Login
+</button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+            <p class="tagline">🔥 THE ULTIMATE GAMING COMMUNITY</p>
+
+            <h1>
+                PLAY.<br>
+                <span>COMPETE.</span><br>
+                WIN.
+            </h1>
+
+            <p>
+                Join exciting gaming tournaments, build your team,
+                compete with players and climb the leaderboard.
+            </p>
+
+            <div class="hero-buttons">
+                <button onclick="scrollToTournaments()">
+                    Join Tournament
+                </button>
+
+                <button class="secondary-btn" onclick="scrollToMatches()">
+                    View Matches
+                </button>
+            </div>
+        </div>
+
+        <div class="hero-game">
+            <div class="game-card">
+                🎮
+                <h2>ESPORTS</h2>
+                <p>Battle • Compete • Win</p>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Statistics -->
+    <section class="stats">
+
+        <div class="stat-card">
+            <h2>120+</h2>
+            <p>Players</p>
+        </div>
+
+        <div class="stat-card">
+            <h2>25+</h2>
+            <p>Tournaments</p>
+        </div>
+
+        <div class="stat-card">
+            <h2>50+</h2>
+            <p>Teams</p>
+        </div>
+
+        <div class="stat-card">
+            <h2>₹5L+</h2>
+            <p>Prize Pool</p>
+        </div>
+
+    </section>
+
+    <!-- Tournaments -->
+    <section id="tournaments" class="section">
+
+        <div class="section-title">
+            <p>COMPETE NOW</p>
+            <h2>Featured Tournaments</h2>
+        </div>
+
+        <div class="tournament-container">
+
+            <div class="tournament-card">
+
+                <div class="game-image pubg">
+                    🔫
+                </div>
+
+                <div class="tournament-info">
+
+                    <span class="status">LIVE REGISTRATION</span>
+
+                    <h3>BGMI Championship</h3>
+
+                    <p>🎮 Battle Royale</p>
+                    <p>👥 100 Players</p>
+                    <p>📅 28 September 2026</p>
+
+                    <div class="prize">
+                        <span>Prize Pool</span>
+                        <strong>₹50,000</strong>
+                    </div>
+
+                    <button onclick="window.location.href='tournament-details.html'">
+    View Tournament
+</button>
+
+                </div>
+            </div>
+
+
+            <div class="tournament-card">
+
+                <div class="game-image valorant">
+                    ⚡
+                </div>
+
+                <div class="tournament-info">
+
+                    <span class="status">OPEN</span>
+
+                    <h3>Valorant Masters</h3>
+
+                    <p>🎮 5v5 Tactical</p>
+                    <p>👥 10 Teams</p>
+                    <p>📅 5 October 2026</p>
+
+                    <div class="prize">
+                        <span>Prize Pool</span>
+                        <strong>₹1,00,000</strong>
+                    </div>
+
+                    <button onclick="registerTournament('Valorant Masters')">
+                        Register Now
+                    </button>
+
+                </div>
+            </div>
+
+
+            <div class="tournament-card">
+
+                <div class="game-image freefire">
+                    🔥
+                </div>
+
+                <div class="tournament-info">
+
+                    <span class="status">OPEN</span>
+
+                    <h3>Free Fire Cup</h3>
+
+                    <p>🎮 Battle Royale</p>
+                    <p>👥 48 Players</p>
+                    <p>📅 12 October 2026</p>
+
+                    <div class="prize">
+                        <span>Prize Pool</span>
+                        <strong>₹25,000</strong>
+                    </div>
+
+                    <button onclick="registerTournament('Free Fire Cup')">
+                        Register Now
+                    </button>
+
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+   <!-- Matches -->
+<section id="matches" class="section matches-section">
+
+    <div class="section-title">
+        <p>UPCOMING</p>
+        <h2>Match Schedule</h2>
+    </div>
+
+    <div class="match-table">
+
+        <div class="match-header">
+            <span>TIME</span>
+            <span>TEAM A</span>
+            <span>VS</span>
+            <span>TEAM B</span>
+            <span>STATUS</span>
+        </div>
+
+        <div class="match-row">
+            <span>10:00 AM</span>
+            <span>🔥 Phoenix</span>
+            <strong>VS</strong>
+            <span>⚡ Titans</span>
+            <b class="live">LIVE</b>
+        </div>
+
+        <div class="match-row">
+            <span>02:00 PM</span>
+            <span>👑 Warriors</span>
+            <strong>VS</strong>
+            <span>💀 Hunters</span>
+            <b>UPCOMING</b>
+        </div>
+
+        <div class="match-row">
+            <span>06:00 PM</span>
+            <span>🚀 Legends</span>
+            <strong>VS</strong>
+            <span>🔥 Kings</span>
+            <b>UPCOMING</b>
+        </div>
+
+    </div>
+
+    <!-- View All Matches Button -->
+    <div class="section-button">
+        <a href="matches.html">
+            <button>View All Matches</button>
+        </a>
+    </div>
+
+</section>
+
+
+<!-- Leaderboard -->
+<section id="leaderboard" class="section">
+
+    <div class="section-title">
+        <p>TOP PLAYERS</p>
+        <h2>Leaderboard</h2>
+    </div>
+
+    <div class="leaderboard">
+
+        <div class="leaderboard-header">
+            <span>Rank</span>
+            <span>Player</span>
+            <span>Wins</span>
+            <span>Points</span>
+        </div>
+
+        <div class="player">
+            <strong>🥇 1</strong>
+            <span>ShadowX</span>
+            <span>24</span>
+            <b>2450</b>
+        </div>
+
+        <div class="player">
+            <strong>🥈 2</strong>
+            <span>DragonKing</span>
+            <span>21</span>
+            <b>2210</b>
+        </div>
+
+        <div class="player">
+            <strong>🥉 3</strong>
+            <span>DarkWolf</span>
+            <span>19</span>
+            <b>2080</b>
+        </div>
+
+        <div class="player">
+            <strong>4</strong>
+            <span>SniperPro</span>
+            <span>17</span>
+            <b>1940</b>
+        </div>
+
+    </div>
+
+    <!-- View Full Leaderboard Button -->
+    <div class="section-button">
+        <a href="leaderboard.html">
+            <button>View Full Leaderboard</button>
+        </a>
+    </div>
+
+</section>
+    <!-- Prize Section -->
+    <section id="prizes" class="prize-section">
+
+        <div>
+            <p>COMPETE FOR GLORY</p>
+            <h2>Win Amazing Prizes 🏆</h2>
+
+            <p>
+                Participate in tournaments and earn exciting
+                cash prizes, trophies and gaming rewards.
+            </p>
+
+            <button onclick="scrollToTournaments()">
+                Explore Tournaments
+            </button>
+        </div>
+
+        <div class="trophy">
+            🏆
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="footer-content">
+
+            <div>
+                <h2>🎮 GameZone</h2>
+                <p>The ultimate gaming tournament community.</p>
+            </div>
+
+            <div>
+                <h3>Quick Links</h3>
+                <p>Home</p>
+                <p>Tournaments</p>
+                <p>Leaderboard</p>
+            </div>
+
+            <div>
+                <h3>Contact</h3>
+                <p>📧 support@gamezone.com</p>
+                <p>📞 +91 98765 43210</p>
+            </div>
+
+        </div>
+
+        <div class="copyright">
+            © 2026 GameZone. All Rights Reserved.
+        </div>
+
+    </footer>
+
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+
+        <div class="modal-content">
+
+            <span class="close" onclick="closeLogin()">×</span>
+
+            <h2>🎮 Player Login</h2>
+
+            <input type="email" id="email" placeholder="Email">
+
+            <input type="password" id="password" placeholder="Password">
+
+            <button onclick="login()">Login</button>
+
+            <p>
+    Don't have an account?
+    <a href="register.html">Register</a>
+</p>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,1232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard - GameZone</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- ============================= -->
+    <!-- NAVBAR -->
+    <!-- ============================= -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            🎮 GameZone
+        </div>
+
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="index.html">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="index.html#tournaments">
+                    Tournaments
+                </a>
+            </li>
+
+            <li>
+                <a href="matches.html">
+                    Matches
+                </a>
+            </li>
+
+            <li>
+                <a href="teams.html">
+                    Teams
+                </a>
+            </li>
+
+            <li>
+                <a href="leaderboard.html">
+                    Leaderboard
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+
+    <!-- ============================= -->
+    <!-- ADMIN HERO -->
+    <!-- ============================= -->
+
+    <section class="admin-hero">
+
+        <p>
+            GAMEZONE MANAGEMENT
+        </p>
+
+        <h1>
+            ⚙️ Admin Dashboard
+        </h1>
+
+        <span>
+            Manage tournaments, matches, players and leaderboard
+        </span>
+
+    </section>
+
+
+
+    <!-- ============================= -->
+    <!-- ADMIN CONTAINER -->
+    <!-- ============================= -->
+
+    <section class="admin-container">
+
+
+        <!-- ============================= -->
+        <!-- STATISTICS -->
+        <!-- ============================= -->
+
+        <div class="admin-stats">
+
+
+            <div class="admin-stat-card">
+
+                <h3>
+                    👥
+                </h3>
+
+                <h2>
+                    120+
+                </h2>
+
+                <p>
+                    Total Players
+                </p>
+
+            </div>
+
+
+
+            <div class="admin-stat-card">
+
+                <h3>
+                    👑
+                </h3>
+
+                <h2>
+                    50+
+                </h2>
+
+                <p>
+                    Total Teams
+                </p>
+
+            </div>
+
+
+
+            <div class="admin-stat-card">
+
+                <h3>
+                    🏆
+                </h3>
+
+                <h2>
+                    25
+                </h2>
+
+                <p>
+                    Tournaments
+                </p>
+
+            </div>
+
+
+
+            <div class="admin-stat-card">
+
+                <h3>
+                    🎮
+                </h3>
+
+                <h2>
+                    5
+                </h2>
+
+                <p>
+                    Live Matches
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- ============================= -->
+        <!-- TOURNAMENT MANAGEMENT -->
+        <!-- ============================= -->
+
+        <div class="admin-section">
+
+
+            <div class="admin-section-title">
+
+                <h2>
+                    🏆 Tournament Management
+                </h2>
+
+
+                <button
+                    onclick="openTournamentForm()">
+
+                    + Add Tournament
+
+                </button>
+
+            </div>
+
+
+
+            <div class="admin-table">
+
+
+                <div class="admin-table-header">
+
+                    <span>
+                        Tournament
+                    </span>
+
+                    <span>
+                        Game
+                    </span>
+
+                    <span>
+                        Players
+                    </span>
+
+                    <span>
+                        Prize
+                    </span>
+
+                    <span>
+                        Status
+                    </span>
+
+                </div>
+
+
+
+                <div class="admin-table-row">
+
+                    <span>
+                        BGMI Championship
+                    </span>
+
+                    <span>
+                        BGMI
+                    </span>
+
+                    <span>
+                        76 / 100
+                    </span>
+
+                    <span>
+                        ₹50,000
+                    </span>
+
+                    <b class="status-open">
+                        OPEN
+                    </b>
+
+                </div>
+
+
+
+                <div class="admin-table-row">
+
+                    <span>
+                        Valorant Masters
+                    </span>
+
+                    <span>
+                        Valorant
+                    </span>
+
+                    <span>
+                        10 / 10
+                    </span>
+
+                    <span>
+                        ₹1,00,000
+                    </span>
+
+                    <b class="status-live">
+                        LIVE
+                    </b>
+
+                </div>
+
+
+
+                <div class="admin-table-row">
+
+                    <span>
+                        Free Fire Cup
+                    </span>
+
+                    <span>
+                        Free Fire
+                    </span>
+
+                    <span>
+                        48 / 48
+                    </span>
+
+                    <span>
+                        ₹25,000
+                    </span>
+
+                    <b class="status-closed">
+                        CLOSED
+                    </b>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ============================= -->
+        <!-- MATCH MANAGEMENT -->
+        <!-- ============================= -->
+
+        <div class="admin-section">
+
+
+            <div class="admin-section-title">
+
+                <h2>
+                    🎮 Match Management
+                </h2>
+
+
+                <button
+                    onclick="openMatchForm()">
+
+                    + Add Match
+
+                </button>
+
+            </div>
+
+
+
+            <div class="admin-table">
+
+
+                <div class="admin-table-header">
+
+                    <span>
+                        Tournament
+                    </span>
+
+                    <span>
+                        Team A
+                    </span>
+
+                    <span>
+                        Team B
+                    </span>
+
+                    <span>
+                        Score
+                    </span>
+
+                    <span>
+                        Status
+                    </span>
+
+                </div>
+
+
+
+                <div class="admin-table-row">
+
+                    <span>
+                        BGMI Championship
+                    </span>
+
+                    <span>
+                        🔥 Phoenix
+                    </span>
+
+                    <span>
+                        ⚡ Titans
+                    </span>
+
+                    <span>
+                        12 - 9
+                    </span>
+
+                    <b class="status-live">
+                        LIVE
+                    </b>
+
+                </div>
+
+
+
+                <div class="admin-table-row">
+
+                    <span>
+                        Valorant Masters
+                    </span>
+
+                    <span>
+                        👑 Warriors
+                    </span>
+
+                    <span>
+                        💀 Hunters
+                    </span>
+
+                    <span>
+                        0 - 0
+                    </span>
+
+                    <b class="status-open">
+                        UPCOMING
+                    </b>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ============================= -->
+        <!-- PLAYER MANAGEMENT -->
+        <!-- ============================= -->
+
+        <div class="admin-section">
+
+
+            <div class="admin-section-title">
+
+                <h2>
+                    👥 Player Management
+                </h2>
+
+            </div>
+
+
+
+            <div class="admin-table">
+
+
+                <div class="admin-table-header">
+
+                    <span>
+                        Player
+                    </span>
+
+                    <span>
+                        Game
+                    </span>
+
+                    <span>
+                        Wins
+                    </span>
+
+                    <span>
+                        Points
+                    </span>
+
+                    <span>
+                        Status
+                    </span>
+
+                </div>
+
+
+
+                <div class="admin-table-row">
+
+                    <span>
+                        ShadowX
+                    </span>
+
+                    <span>
+                        BGMI
+                    </span>
+
+                    <span>
+                        24
+                    </span>
+
+                    <span>
+                        2450
+                    </span>
+
+                    <b class="status-open">
+                        ACTIVE
+                    </b>
+
+                </div>
+
+
+
+                <div class="admin-table-row">
+
+                    <span>
+                        DragonKing
+                    </span>
+
+                    <span>
+                        Valorant
+                    </span>
+
+                    <span>
+                        21
+                    </span>
+
+                    <span>
+                        2210
+                    </span>
+
+                    <b class="status-open">
+                        ACTIVE
+                    </b>
+
+                </div>
+
+
+
+                <div class="admin-table-row">
+
+                    <span>
+                        DarkWolf
+                    </span>
+
+                    <span>
+                        Free Fire
+                    </span>
+
+                    <span>
+                        19
+                    </span>
+
+                    <span>
+                        2080
+                    </span>
+
+                    <b class="status-open">
+                        ACTIVE
+                    </b>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ============================= -->
+        <!-- QUICK ACTIONS -->
+        <!-- ============================= -->
+
+        <div class="admin-section">
+
+
+            <div class="admin-section-title">
+
+                <h2>
+                    ⚡ Quick Actions
+                </h2>
+
+            </div>
+
+
+            <div class="admin-actions">
+
+
+                <button
+                    onclick="updateLeaderboard()">
+
+                    🏆 Update Leaderboard
+
+                </button>
+
+
+                <button
+                    onclick="sendAnnouncement()">
+
+                    📢 Send Announcement
+
+                </button>
+
+
+                <button
+                    onclick="exportData()">
+
+                    📥 Export Data
+
+                </button>
+
+
+                <button
+                    onclick="adminLogout()">
+
+                    🚪 Logout
+
+                </button>
+
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- ============================= -->
+    <!-- ADD TOURNAMENT MODAL -->
+    <!-- ============================= -->
+
+    <div
+        id="tournamentModal"
+        class="admin-modal">
+
+
+        <div class="admin-modal-box">
+
+
+            <span
+                class="close-modal"
+                onclick="closeTournamentForm()">
+
+                ×
+
+            </span>
+
+
+            <h2>
+                🏆 Add Tournament
+            </h2>
+
+
+
+            <form
+                onsubmit="addTournament(event)">
+
+
+                <input
+                    type="text"
+                    id="tournamentName"
+                    placeholder="Tournament Name"
+                    required
+                >
+
+
+                <select
+                    id="tournamentGame"
+                    required>
+
+                    <option value="">
+                        Select Game
+                    </option>
+
+                    <option value="BGMI">
+                        BGMI
+                    </option>
+
+                    <option value="Valorant">
+                        Valorant
+                    </option>
+
+                    <option value="Free Fire">
+                        Free Fire
+                    </option>
+
+                    <option value="CS2">
+                        CS2
+                    </option>
+
+                </select>
+
+
+                <input
+                    type="number"
+                    id="tournamentPlayers"
+                    placeholder="Maximum Players"
+                    min="1"
+                    required
+                >
+
+
+                <input
+                    type="number"
+                    id="tournamentPrize"
+                    placeholder="Prize Pool"
+                    min="0"
+                    required
+                >
+
+
+                <button
+                    type="submit">
+
+                    Add Tournament
+
+                </button>
+
+
+            </form>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ============================= -->
+    <!-- ADD MATCH MODAL -->
+    <!-- ============================= -->
+
+    <div
+        id="matchModal"
+        class="admin-modal">
+
+
+        <div class="admin-modal-box">
+
+
+            <span
+                class="close-modal"
+                onclick="closeMatchForm()">
+
+                ×
+
+            </span>
+
+
+            <h2>
+                🎮 Add Match
+            </h2>
+
+
+
+            <form
+                onsubmit="addMatch(event)">
+
+
+                <input
+                    type="text"
+                    id="matchTournament"
+                    placeholder="Tournament Name"
+                    required
+                >
+
+
+                <input
+                    type="text"
+                    id="teamA"
+                    placeholder="Team A"
+                    required
+                >
+
+
+                <input
+                    type="text"
+                    id="teamB"
+                    placeholder="Team B"
+                    required
+                >
+
+
+                <input
+                    type="text"
+                    id="matchTime"
+                    placeholder="Match Time"
+                    required
+                >
+
+
+                <select
+                    id="matchStatus"
+                    required>
+
+                    <option value="">
+                        Select Status
+                    </option>
+
+                    <option value="UPCOMING">
+                        UPCOMING
+                    </option>
+
+                    <option value="LIVE">
+                        LIVE
+                    </option>
+
+                    <option value="COMPLETED">
+                        COMPLETED
+                    </option>
+
+                </select>
+
+
+                <button
+                    type="submit">
+
+                    Add Match
+
+                </button>
+
+
+            </form>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ============================= -->
+    <!-- JAVASCRIPT -->
+    <!-- ============================= -->
+
+    <script>
+
+
+        // ========================================
+        // ADMIN ACCESS PROTECTION
+        // ========================================
+
+        const isAdmin =
+            localStorage.getItem("gameZoneAdmin");
+
+
+        if (isAdmin !== "true") {
+
+            window.location.href =
+                "admin-login.html";
+
+        }
+
+
+
+        // ========================================
+        // TOURNAMENT MODAL
+        // ========================================
+
+        function openTournamentForm() {
+
+            document.getElementById(
+                "tournamentModal"
+            ).style.display = "flex";
+
+        }
+
+
+        function closeTournamentForm() {
+
+            document.getElementById(
+                "tournamentModal"
+            ).style.display = "none";
+
+        }
+
+
+
+        // ========================================
+        // MATCH MODAL
+        // ========================================
+
+        function openMatchForm() {
+
+            document.getElementById(
+                "matchModal"
+            ).style.display = "flex";
+
+        }
+
+
+        function closeMatchForm() {
+
+            document.getElementById(
+                "matchModal"
+            ).style.display = "none";
+
+        }
+
+
+
+        // ========================================
+        // ADD TOURNAMENT
+        // ========================================
+
+        function addTournament(event) {
+
+            event.preventDefault();
+
+
+            const name =
+                document.getElementById(
+                    "tournamentName"
+                ).value;
+
+
+            const game =
+                document.getElementById(
+                    "tournamentGame"
+                ).value;
+
+
+            const players =
+                document.getElementById(
+                    "tournamentPlayers"
+                ).value;
+
+
+            const prize =
+                document.getElementById(
+                    "tournamentPrize"
+                ).value;
+
+
+
+            const tournament = {
+
+                name: name,
+
+                game: game,
+
+                players: players,
+
+                prize: prize,
+
+                status: "OPEN"
+
+            };
+
+
+
+            localStorage.setItem(
+
+                "adminTournament",
+
+                JSON.stringify(tournament)
+
+            );
+
+
+
+            alert(
+                "🏆 Tournament added successfully!"
+            );
+
+
+            document.querySelector(
+                "#tournamentModal form"
+            ).reset();
+
+
+            closeTournamentForm();
+
+        }
+
+
+
+        // ========================================
+        // ADD MATCH
+        // ========================================
+
+        function addMatch(event) {
+
+            event.preventDefault();
+
+
+            const tournament =
+                document.getElementById(
+                    "matchTournament"
+                ).value;
+
+
+            const teamA =
+                document.getElementById(
+                    "teamA"
+                ).value;
+
+
+            const teamB =
+                document.getElementById(
+                    "teamB"
+                ).value;
+
+
+            const time =
+                document.getElementById(
+                    "matchTime"
+                ).value;
+
+
+            const status =
+                document.getElementById(
+                    "matchStatus"
+                ).value;
+
+
+
+            const match = {
+
+                tournament: tournament,
+
+                teamA: teamA,
+
+                teamB: teamB,
+
+                time: time,
+
+                status: status,
+
+                score: "0 - 0"
+
+            };
+
+
+
+            localStorage.setItem(
+
+                "adminMatch",
+
+                JSON.stringify(match)
+
+            );
+
+
+
+            alert(
+                "🎮 Match added successfully!"
+            );
+
+
+            document.querySelector(
+                "#matchModal form"
+            ).reset();
+
+
+            closeMatchForm();
+
+        }
+
+
+
+        // ========================================
+        // UPDATE LEADERBOARD
+        // ========================================
+
+        function updateLeaderboard() {
+
+            alert(
+                "🏆 Leaderboard update section will be connected next."
+            );
+
+        }
+
+
+
+        // ========================================
+        // SEND ANNOUNCEMENT
+        // ========================================
+
+        function sendAnnouncement() {
+
+            const message =
+                prompt(
+                    "Enter announcement:"
+                );
+
+
+            if (message && message.trim() !== "") {
+
+                localStorage.setItem(
+                    "gameZoneAnnouncement",
+                    message
+                );
+
+
+                alert(
+                    "📢 Announcement sent successfully!"
+                );
+
+            }
+
+        }
+
+
+
+        // ========================================
+        // EXPORT DATA
+        // ========================================
+
+        function exportData() {
+
+
+            const player =
+                localStorage.getItem(
+                    "gameZonePlayer"
+                );
+
+
+            const team =
+                localStorage.getItem(
+                    "gameZoneTeam"
+                );
+
+
+            const tournament =
+                localStorage.getItem(
+                    "adminTournament"
+                );
+
+
+            const match =
+                localStorage.getItem(
+                    "adminMatch"
+                );
+
+
+            const data = {
+
+                player: player,
+
+                team: team,
+
+                tournament: tournament,
+
+                match: match
+
+            };
+
+
+            console.log(
+                "GameZone Data:",
+                data
+            );
+
+
+            alert(
+                "📥 Data exported to browser console."
+            );
+
+        }
+
+
+
+        // ========================================
+        // ADMIN LOGOUT
+        // ========================================
+
+        function adminLogout() {
+
+            const confirmLogout =
+                confirm(
+                    "Are you sure you want to logout?"
+                );
+
+
+            if (confirmLogout) {
+
+                localStorage.removeItem(
+                    "gameZoneAdmin"
+                );
+
+
+                window.location.href =
+                    "admin-login.html";
+
+            }
+
+        }
+
+
+
+        // ========================================
+        // CLOSE MODALS BY CLICKING OUTSIDE
+        // ========================================
+
+        window.addEventListener(
+            "click",
+            function(event) {
+
+
+                const tournamentModal =
+                    document.getElementById(
+                        "tournamentModal"
+                    );
+
+
+                const matchModal =
+                    document.getElementById(
+                        "matchModal"
+                    );
+
+
+                if (
+                    event.target ===
+                    tournamentModal
+                ) {
+
+                    closeTournamentForm();
+
+                }
+
+
+                if (
+                    event.target ===
+                    matchModal
+                ) {
+
+                    closeMatchForm();
+
+                }
+
+            }
+        );
+
+
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Team - GameZone</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+
+    <nav class="navbar">
+
+        <div class="logo">🎮 GameZone</div>
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+
+            <li>
+                <a href="index.html#tournaments">
+                    Tournaments
+                </a>
+            </li>
+
+            <li>
+                <a href="teams.html">
+                    My Team
+                </a>
+            </li>
+
+            <li>
+                <a href="leaderboard.html">
+                    Leaderboard
+                </a>
+            </li>
+
+        </ul>
+
+        <button onclick="window.location.href='index.html'">
+            Home
+        </button>
+
+    </nav>
+
+</header>
+
+
+<!-- Page Header -->
+
+<section class="team-hero">
+
+    <p>TEAM MANAGEMENT</p>
+
+    <h1>👥 My Team</h1>
+
+    <span>
+        Create your squad and get ready for battle.
+    </span>
+
+</section>
+
+
+<!-- Team Container -->
+
+<section class="team-container">
+
+    <!-- Create Team -->
+
+    <div
+        id="createTeamSection"
+        class="team-card"
+    >
+
+        <div class="team-card-title">
+
+            <h2>⚡ Create Your Team</h2>
+
+            <p>
+                Build your squad for upcoming tournaments.
+            </p>
+
+        </div>
+
+
+        <form id="teamForm">
+
+            <div class="form-group">
+
+                <label>Team Name</label>
+
+                <input
+                    type="text"
+                    id="teamNameInput"
+                    placeholder="Enter team name"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>Game</label>
+
+                <select id="teamGame" required>
+
+                    <option value="">
+                        Select Game
+                    </option>
+
+                    <option value="BGMI">
+                        BGMI
+                    </option>
+
+                    <option value="Valorant">
+                        Valorant
+                    </option>
+
+                    <option value="Free Fire">
+                        Free Fire
+                    </option>
+
+                    <option value="CS2">
+                        Counter Strike 2
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <button type="submit">
+                Create Team 🚀
+            </button>
+
+        </form>
+
+    </div>
+
+
+    <!-- Team Dashboard -->
+
+    <div
+        id="teamDashboard"
+        class="team-card team-dashboard"
+        style="display:none;"
+    >
+
+        <div class="team-header">
+
+            <div>
+
+                <span class="team-badge">
+                    🎮
+                </span>
+
+            </div>
+
+            <div>
+
+                <h2 id="displayTeamName">
+                    Team Name
+                </h2>
+
+                <p id="displayGame">
+                    BGMI
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- Team Stats -->
+
+        <div class="team-stats">
+
+            <div>
+
+                <strong>4</strong>
+
+                <span>
+                    Players
+                </span>
+
+            </div>
+
+
+            <div>
+
+                <strong>0</strong>
+
+                <span>
+                    Wins
+                </span>
+
+            </div>
+
+
+            <div>
+
+                <strong>0</strong>
+
+                <span>
+                    Tournaments
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- Players -->
+
+        <h3 class="players-title">
+            Team Players
+        </h3>
+
+
+        <div class="players-grid">
+
+
+            <!-- Captain -->
+
+            <div class="player-card captain">
+
+                <div class="player-avatar">
+                    👑
+                </div>
+
+                <h3 id="captainName">
+                    Captain
+                </h3>
+
+                <p>
+                    Captain
+                </p>
+
+                <span>
+                    ONLINE
+                </span>
+
+            </div>
+
+
+            <!-- Player 2 -->
+
+            <div class="player-card">
+
+                <div class="player-avatar">
+                    🎮
+                </div>
+
+                <h3 id="player2Name">
+                    Player 2
+                </h3>
+
+                <p>
+                    Member
+                </p>
+
+                <span>
+                    INVITE
+                </span>
+
+            </div>
+
+
+            <!-- Player 3 -->
+
+            <div class="player-card">
+
+                <div class="player-avatar">
+                    🎮
+                </div>
+
+                <h3>
+                    Player 3
+                </h3>
+
+                <p>
+                    Member
+                </p>
+
+                <span>
+                    INVITE
+                </span>
+
+            </div>
+
+
+            <!-- Player 4 -->
+
+            <div class="player-card">
+
+                <div class="player-avatar">
+                    🎮
+                </div>
+
+                <h3>
+                    Player 4
+                </h3>
+
+                <p>
+                    Member
+                </p>
+
+                <span>
+                    INVITE
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="team-actions">
+
+            <button
+                onclick="invitePlayer()"
+            >
+                ➕ Invite Player
+            </button>
+
+
+            <button
+                class="delete-btn"
+                onclick="deleteTeam()"
+            >
+                🗑 Delete Team
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- Team Rules -->
+
+    <div class="team-rules">
+
+        <h2>📜 Team Rules</h2>
+
+        <ul>
+
+            <li>
+                A team can have up to 4 players.
+            </li>
+
+            <li>
+                Every player must have a registered GameZone account.
+            </li>
+
+            <li>
+                Only the captain can register the team for tournaments.
+            </li>
+
+            <li>
+                Team members cannot be changed after a match begins.
+            </li>
+
+            <li>
+                All players must follow tournament rules.
+            </li>
+
+        </ul>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    <div class="copyright">
+
+        © 2026 GameZone. All Rights Reserved.
+
+    </div>
+
+</footer>
+
+
+<script>
+
+
+// Load team
+
+window.addEventListener(
+    "DOMContentLoaded",
+    loadTeam
+);
+
+
+function loadTeam() {
+
+    const savedTeam =
+        localStorage.getItem("gameZoneTeam");
+
+
+    if (!savedTeam) {
+
+        return;
+
+    }
+
+
+    const team =
+        JSON.parse(savedTeam);
+
+
+    document.getElementById(
+        "createTeamSection"
+    ).style.display = "none";
+
+
+    document.getElementById(
+        "teamDashboard"
+    ).style.display = "block";
+
+
+    document.getElementById(
+        "displayTeamName"
+    ).textContent = team.name;
+
+
+    document.getElementById(
+        "displayGame"
+    ).textContent = team.game;
+
+
+    document.getElementById(
+        "captainName"
+    ).textContent = team.captain;
+
+}
+
+
+// Create Team
+
+document
+.getElementById("teamForm")
+.addEventListener(
+    "submit",
+    function(event) {
+
+        event.preventDefault();
+
+
+        const teamName =
+            document.getElementById(
+                "teamNameInput"
+            ).value;
+
+
+        const game =
+            document.getElementById(
+                "teamGame"
+            ).value;
+
+
+        const player =
+            JSON.parse(
+                localStorage.getItem(
+                    "gameZonePlayer"
+                )
+            );
+
+
+        const captain =
+            player
+            ? player.username
+            : "Captain";
+
+
+        const team = {
+
+            name: teamName,
+
+            game: game,
+
+            captain: captain
+
+        };
+
+
+        localStorage.setItem(
+            "gameZoneTeam",
+            JSON.stringify(team)
+        );
+
+
+        alert(
+            "🎉 Team Created Successfully!"
+        );
+
+
+        location.reload();
+
+    }
+);
+
+
+// Invite Player
+
+function invitePlayer() {
+
+    const username =
+        prompt(
+            "Enter GameZone username:"
+        );
+
+
+    if (!username) {
+
+        return;
+
+    }
+
+
+    alert(
+        "📨 Invitation sent to @" +
+        username
+    );
+
+}
+
+
+// Delete Team
+
+function deleteTeam() {
+
+    const confirmDelete =
+        confirm(
+            "Are you sure you want to delete your team?"
+        );
+
+
+    if (!confirmDelete) {
+
+        return;
+
+    }
+
+
+    localStorage.removeItem(
+        "gameZoneTeam"
+    );
+
+
+    alert(
+        "Team deleted successfully."
+    );
+
+
+    location.reload();
+
+}
+
+</script>
+
+</body>
+
+</html>

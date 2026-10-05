@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Matches - GameZone</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+
+    <nav class="navbar">
+
+        <div class="logo">🎮 GameZone</div>
+
+        <ul class="nav-links">
+
+            <li><a href="index.html">Home</a></li>
+
+            <li>
+                <a href="index.html#tournaments">
+                    Tournaments
+                </a>
+            </li>
+
+            <li>
+                <a href="teams.html">
+                    My Team
+                </a>
+            </li>
+
+            <li>
+                <a href="matches.html">
+                    Matches
+                </a>
+            </li>
+
+            <li>
+                <a href="leaderboard.html">
+                    Leaderboard
+                </a>
+            </li>
+
+        </ul>
+
+        <button onclick="window.location.href='index.html'">
+            Home
+        </button>
+
+    </nav>
+
+</header>
+
+
+<!-- Page Header -->
+
+<section class="match-hero">
+
+    <p>ESPORTS MATCH CENTER</p>
+
+    <h1>🎮 Matches</h1>
+
+    <span>
+        Follow upcoming and live tournament matches.
+    </span>
+
+</section>
+
+
+<!-- Match Filters -->
+
+<section class="match-container">
+
+    <div class="match-filters">
+
+        <button
+            class="filter-btn active"
+            onclick="filterMatches('all', this)">
+            All
+        </button>
+
+        <button
+            class="filter-btn"
+            onclick="filterMatches('live', this)">
+            🔴 Live
+        </button>
+
+        <button
+            class="filter-btn"
+            onclick="filterMatches('upcoming', this)">
+            Upcoming
+        </button>
+
+        <button
+            class="filter-btn"
+            onclick="filterMatches('completed', this)">
+            Completed
+        </button>
+
+    </div>
+
+
+    <!-- Live Match -->
+
+    <div
+        class="match-card"
+        data-status="live"
+    >
+
+        <div class="match-top">
+
+            <span class="live-badge">
+                🔴 LIVE
+            </span>
+
+            <span>
+                BGMI Championship
+            </span>
+
+        </div>
+
+
+        <div class="match-teams">
+
+            <div class="match-team">
+
+                <div class="team-logo">
+                    🔥
+                </div>
+
+                <h2>Phoenix</h2>
+
+                <p>India</p>
+
+            </div>
+
+
+            <div class="match-score">
+
+                <strong>12 - 9</strong>
+
+                <span>Round 4</span>
+
+            </div>
+
+
+            <div class="match-team">
+
+                <div class="team-logo">
+                    ⚡
+                </div>
+
+                <h2>Titans</h2>
+
+                <p>India</p>
+
+            </div>
+
+        </div>
+
+
+        <div class="match-bottom">
+
+            <span>
+                🎮 Squad
+            </span>
+
+            <span>
+                📍 Online
+            </span>
+
+            <button onclick="watchMatch('Phoenix vs Titans')">
+                Watch Live
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- Upcoming Match -->
+
+    <div
+        class="match-card"
+        data-status="upcoming"
+    >
+
+        <div class="match-top">
+
+            <span class="upcoming-badge">
+                UPCOMING
+            </span>
+
+            <span>
+                Valorant Masters
+            </span>
+
+        </div>
+
+
+        <div class="match-teams">
+
+            <div class="match-team">
+
+                <div class="team-logo">
+                    👑
+                </div>
+
+                <h2>Warriors</h2>
+
+                <p>India</p>
+
+            </div>
+
+
+            <div class="match-time">
+
+                <strong>02:00 PM</strong>
+
+                <span>28 Sep 2026</span>
+
+            </div>
+
+
+            <div class="match-team">
+
+                <div class="team-logo">
+                    💀
+                </div>
+
+                <h2>Hunters</h2>
+
+                <p>India</p>
+
+            </div>
+
+        </div>
+
+
+        <div class="match-bottom">
+
+            <span>
+                🎮 5v5
+            </span>
+
+            <span>
+                📍 Online
+            </span>
+
+            <button onclick="setReminder('Warriors vs Hunters')">
+                Set Reminder
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- Completed Match -->
+
+    <div
+        class="match-card"
+        data-status="completed"
+    >
+
+        <div class="match-top">
+
+            <span class="completed-badge">
+                COMPLETED
+            </span>
+
+            <span>
+                Free Fire Cup
+            </span>
+
+        </div>
+
+
+        <div class="match-teams">
+
+            <div class="match-team">
+
+                <div class="team-logo">
+                    🚀
+                </div>
+
+                <h2>Legends</h2>
+
+                <p>India</p>
+
+            </div>
+
+
+            <div class="match-score">
+
+                <strong>18 - 14</strong>
+
+                <span>Final</span>
+
+            </div>
+
+
+            <div class="match-team">
+
+                <div class="team-logo">
+                    🔥
+                </div>
+
+                <h2>Kings</h2>
+
+                <p>India</p>
+
+            </div>
+
+        </div>
+
+
+        <div class="match-bottom">
+
+            <span>
+                🎮 Battle Royale
+            </span>
+
+            <span>
+                🏆 Final
+            </span>
+
+            <button onclick="viewResult('Legends vs Kings')">
+                View Result
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    <div class="copyright">
+
+        © 2026 GameZone. All Rights Reserved.
+
+    </div>
+
+</footer>
+
+
+<script>
+
+function filterMatches(status, button) {
+
+    const cards =
+        document.querySelectorAll(".match-card");
+
+    const buttons =
+        document.querySelectorAll(".filter-btn");
+
+
+    buttons.forEach(btn => {
+        btn.classList.remove("active");
+    });
+
+
+    button.classList.add("active");
+
+
+    cards.forEach(card => {
+
+        if (
+            status === "all" ||
+            card.dataset.status === status
+        ) {
+
+            card.style.display = "block";
+
+        } else {
+
+            card.style.display = "none";
+
+        }
+
+    });
+
+}
+
+
+function watchMatch(match) {
+
+    alert(
+        "🔴 LIVE MATCH\n\n" +
+        match +
+        "\n\nLive streaming will open here."
+    );
+
+}
+
+
+function setReminder(match) {
+
+    alert(
+        "🔔 Reminder Set!\n\n" +
+        match +
+        "\n\nYou will be notified before the match."
+    );
+
+}
+
+
+function viewResult(match) {
+
+    alert(
+        "🏆 Match Result\n\n" +
+        match +
+        "\n\nDetailed statistics coming soon."
+    );
+
+}
+
+</script>
+
+</body>
+
+</html>

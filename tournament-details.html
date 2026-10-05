@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tournament Details - GameZone</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+
+    <nav class="navbar">
+
+        <div class="logo">🎮 GameZone</div>
+
+        <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="index.html#tournaments">Tournaments</a></li>
+    <li><a href="index.html#matches">Matches</a></li>
+    <li><a href="teams.html">My Team</a></li>
+    <li><a href="index.html#leaderboard">Leaderboard</a></li>
+</ul>
+
+        <button onclick="window.location.href='register.html'">
+            Register
+        </button>
+
+    </nav>
+
+</header>
+
+
+<!-- Tournament Hero -->
+
+<section class="tournament-details-hero">
+
+    <div class="details-game-icon">
+        🎮
+    </div>
+
+    <div>
+
+        <span class="status">
+            REGISTRATION OPEN
+        </span>
+
+        <h1>BGMI Championship</h1>
+
+        <p>
+            Battle Royale • Squad Tournament
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- Tournament Information -->
+
+<section class="details-container">
+
+    <div class="details-main">
+
+        <div class="info-grid">
+
+            <div class="info-card">
+                <span>🎮</span>
+                <p>Game</p>
+                <h3>BGMI</h3>
+            </div>
+
+            <div class="info-card">
+                <span>👥</span>
+                <p>Players</p>
+                <h3>100</h3>
+            </div>
+
+            <div class="info-card">
+                <span>💰</span>
+                <p>Prize Pool</p>
+                <h3>₹50,000</h3>
+            </div>
+
+            <div class="info-card">
+                <span>💵</span>
+                <p>Entry Fee</p>
+                <h3>₹100</h3>
+            </div>
+
+        </div>
+
+
+        <!-- About -->
+
+        <div class="details-card">
+
+            <h2>About Tournament</h2>
+
+            <p>
+                Welcome to the BGMI Championship!
+                Compete against skilled players, build your
+                squad and fight your way to the top.
+            </p>
+
+            <p>
+                The tournament consists of multiple rounds
+                followed by the grand final.
+            </p>
+
+        </div>
+
+
+        <!-- Rules -->
+
+        <div class="details-card">
+
+            <h2>📜 Tournament Rules</h2>
+
+            <ul class="rules">
+
+                <li>Players must register before the deadline.</li>
+
+                <li>Each team must have four players.</li>
+
+                <li>Players must use their registered game ID.</li>
+
+                <li>Any cheating or hacking will result in disqualification.</li>
+
+                <li>Match results will be verified by organizers.</li>
+
+                <li>Organizers' decisions will be final.</li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- Schedule -->
+
+        <div class="details-card">
+
+            <h2>📅 Tournament Schedule</h2>
+
+            <div class="schedule">
+
+                <div>
+                    <strong>Registration</strong>
+                    <span>20 - 27 September</span>
+                </div>
+
+                <div>
+                    <strong>Qualifier Round</strong>
+                    <span>28 September</span>
+                </div>
+
+                <div>
+                    <strong>Semi Final</strong>
+                    <span>29 September</span>
+                </div>
+
+                <div>
+                    <strong>Grand Final</strong>
+                    <span>30 September</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Registration Box -->
+
+    <aside class="registration-card">
+
+        <h2>Join Tournament</h2>
+
+        <p class="price">
+            ₹100
+            <span>Entry Fee</span>
+        </p>
+
+        <div class="registration-info">
+
+            <p>
+                🏆 Prize Pool
+                <strong>₹50,000</strong>
+            </p>
+
+            <p>
+                👥 Registered
+                <strong>76 / 100</strong>
+            </p>
+
+            <p>
+                📅 Date
+                <strong>28 Sep 2026</strong>
+            </p>
+
+            <p>
+                🎮 Mode
+                <strong>Squad</strong>
+            </p>
+
+        </div>
+
+        <button
+            class="join-btn"
+            onclick="openTournamentRegistration()">
+
+            Register Now 🎮
+
+        </button>
+
+    </aside>
+
+</section>
+
+
+<!-- Registration Modal -->
+
+<div id="tournamentModal" class="modal">
+
+    <div class="modal-content tournament-modal">
+
+        <span
+            class="close"
+            onclick="closeTournamentRegistration()">
+
+            
+
+        </span>
+
+        <h2>🎮 Tournament Registration</h2>
+
+        <p class="modal-subtitle">
+            BGMI Championship
+        </p>
+
+
+        <form id="tournamentForm">
+
+            <input
+                type="text"
+                id="playerName"
+                placeholder="Player Name"
+                required
+            >
+
+            <input
+                type="text"
+                id="gameId"
+                placeholder="BGMI Game ID"
+                required
+            >
+
+            <input
+                type="text"
+                id="teamName"
+                placeholder="Team Name"
+                required
+            >
+
+            <input
+                type="tel"
+                id="playerPhone"
+                placeholder="Phone Number"
+                required
+            >
+
+
+            <label class="checkbox-row">
+
+                <input
+                    type="checkbox"
+                    required
+                >
+
+                I agree to the tournament rules.
+
+            </label>
+
+
+            <button type="submit">
+                Confirm Registration
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+<footer>
+
+    <div class="copyright">
+        © 2026 GameZone. All Rights Reserved.
+    </div>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+<script>
+
+function openTournamentRegistration() {
+
+    document.getElementById(
+        "tournamentModal"
+    ).style.display = "flex";
+
+}
+
+
+function closeTournamentRegistration() {
+
+    document.getElementById(
+        "tournamentModal"
+    ).style.display = "none";
+
+}
+
+
+document
+.getElementById("tournamentForm")
+.addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    const registration = {
+
+        player:
+            document.getElementById("playerName").value,
+
+        gameId:
+            document.getElementById("gameId").value,
+
+        team:
+            document.getElementById("teamName").value,
+
+        phone:
+            document.getElementById("playerPhone").value,
+
+        tournament:
+            "BGMI Championship"
+
+    };
+
+
+    localStorage.setItem(
+        "tournamentRegistration",
+        JSON.stringify(registration)
+    );
+
+
+    alert(
+        "🎉 Tournament Registration Successful!\n\n" +
+        "Tournament: BGMI Championship\n" +
+        "Team: " + registration.team
+    );
+
+
+    closeTournamentRegistration();
+
+});
+
+</script>
+
+</body>
+</html>

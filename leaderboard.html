@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Leaderboard - GameZone</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+
+<header>
+
+    <nav class="navbar">
+
+        <div class="logo">
+            🎮 GameZone
+        </div>
+
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="index.html">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="index.html#tournaments">
+                    Tournaments
+                </a>
+            </li>
+
+            <li>
+                <a href="teams.html">
+                    My Team
+                </a>
+            </li>
+
+            <li>
+                <a href="matches.html">
+                    Matches
+                </a>
+            </li>
+
+            <li>
+                <a href="leaderboard.html">
+                    Leaderboard
+                </a>
+            </li>
+
+        </ul>
+
+
+        <button
+            onclick="window.location.href='index.html'">
+
+            Home
+
+        </button>
+
+    </nav>
+
+</header>
+
+
+<!-- Hero -->
+
+<section class="leaderboard-hero">
+
+    <p>TOP GAMERS</p>
+
+    <h1>🏆 Leaderboard</h1>
+
+    <span>
+        Compete. Earn points. Climb the rankings.
+    </span>
+
+</section>
+
+
+<section class="leaderboard-page">
+
+
+    <!-- Top 3 -->
+
+    <div class="top-players">
+
+
+        <div class="top-player second">
+
+            <div class="rank-medal">
+                🥈
+            </div>
+
+            <div class="big-avatar">
+                🎮
+            </div>
+
+            <h2>DragonKing</h2>
+
+            <p>21 Wins</p>
+
+            <strong>
+                2210 Points
+            </strong>
+
+        </div>
+
+
+        <div class="top-player first">
+
+            <div class="rank-medal">
+                🥇
+            </div>
+
+            <div class="big-avatar">
+                👑
+            </div>
+
+            <h2>ShadowX</h2>
+
+            <p>24 Wins</p>
+
+            <strong>
+                2450 Points
+            </strong>
+
+        </div>
+
+
+        <div class="top-player third">
+
+            <div class="rank-medal">
+                🥉
+            </div>
+
+            <div class="big-avatar">
+                🔥
+            </div>
+
+            <h2>DarkWolf</h2>
+
+            <p>19 Wins</p>
+
+            <strong>
+                2080 Points
+            </strong>
+
+        </div>
+
+    </div>
+
+
+    <!-- Search -->
+
+    <div class="leaderboard-tools">
+
+        <input
+            type="text"
+            id="playerSearch"
+            placeholder="🔎 Search player..."
+            onkeyup="searchPlayer()"
+        >
+
+
+        <select
+            id="gameFilter"
+            onchange="filterGame()">
+
+            <option value="all">
+                All Games
+            </option>
+
+            <option value="BGMI">
+                BGMI
+            </option>
+
+            <option value="Valorant">
+                Valorant
+            </option>
+
+            <option value="Free Fire">
+                Free Fire
+            </option>
+
+        </select>
+
+    </div>
+
+
+    <!-- Table -->
+
+    <div class="leaderboard-table">
+
+
+        <div class="leaderboard-row table-head">
+
+            <span>Rank</span>
+
+            <span>Player</span>
+
+            <span>Game</span>
+
+            <span>Wins</span>
+
+            <span>Points</span>
+
+        </div>
+
+
+        <div
+            class="leaderboard-row"
+            data-game="BGMI"
+            data-player="ShadowX">
+
+            <strong>🥇 1</strong>
+
+            <span>
+                👑 ShadowX
+            </span>
+
+            <span>BGMI</span>
+
+            <span>24</span>
+
+            <b>2450</b>
+
+        </div>
+
+
+        <div
+            class="leaderboard-row"
+            data-game="Valorant"
+            data-player="DragonKing">
+
+            <strong>🥈 2</strong>
+
+            <span>
+                🎮 DragonKing
+            </span>
+
+            <span>Valorant</span>
+
+            <span>21</span>
+
+            <b>2210</b>
+
+        </div>
+
+
+        <div
+            class="leaderboard-row"
+            data-game="Free Fire"
+            data-player="DarkWolf">
+
+            <strong>🥉 3</strong>
+
+            <span>
+                🔥 DarkWolf
+            </span>
+
+            <span>Free Fire</span>
+
+            <span>19</span>
+
+            <b>2080</b>
+
+        </div>
+
+
+        <div
+            class="leaderboard-row"
+            data-game="BGMI"
+            data-player="SniperPro">
+
+            <strong>4</strong>
+
+            <span>
+                🎯 SniperPro
+            </span>
+
+            <span>BGMI</span>
+
+            <span>17</span>
+
+            <b>1940</b>
+
+        </div>
+
+
+        <div
+            class="leaderboard-row"
+            data-game="Valorant"
+            data-player="NightFury">
+
+            <strong>5</strong>
+
+            <span>
+                ⚡ NightFury
+            </span>
+
+            <span>Valorant</span>
+
+            <span>16</span>
+
+            <b>1850</b>
+
+        </div>
+
+
+        <div
+            class="leaderboard-row"
+            data-game="Free Fire"
+            data-player="Ghost">
+
+            <strong>6</strong>
+
+            <span>
+                👻 Ghost
+            </span>
+
+            <span>Free Fire</span>
+
+            <span>14</span>
+
+            <b>1710</b>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    <div class="copyright">
+
+        © 2026 GameZone. All Rights Reserved.
+
+    </div>
+
+</footer>
+
+
+<script>
+
+
+function searchPlayer() {
+
+    const search =
+        document
+        .getElementById("playerSearch")
+        .value
+        .toLowerCase();
+
+
+    const rows =
+        document
+        .querySelectorAll(
+            ".leaderboard-row:not(.table-head)"
+        );
+
+
+    rows.forEach(row => {
+
+        const player =
+            row.dataset.player
+            .toLowerCase();
+
+
+        if (
+            player.includes(search)
+        ) {
+
+            row.style.display = "grid";
+
+        } else {
+
+            row.style.display = "none";
+
+        }
+
+    });
+
+}
+
+
+function filterGame() {
+
+    const game =
+        document
+        .getElementById("gameFilter")
+        .value;
+
+
+    const rows =
+        document
+        .querySelectorAll(
+            ".leaderboard-row:not(.table-head)"
+        );
+
+
+    rows.forEach(row => {
+
+        if (
+            game === "all" ||
+            row.dataset.game === game
+        ) {
+
+            row.style.display = "grid";
+
+        } else {
+
+            row.style.display = "none";
+
+        }
+
+    });
+
+}
+
+</script>
+
+
+</body>
+
+</html>
